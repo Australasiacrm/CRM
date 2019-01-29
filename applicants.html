@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="style.css">
+<style>
+body {
+  font-family: "Lato", sans-serif;
+  background-color: lightblue;
+}
+
+
+</style>
+</head>
+<body>
+<div class="header">Australasia</div>
+<div class="sidenav">
+  <a href="dashboard.html"><i class="dashboard"></i> DASHBOARD</a>
+  <a href="branchlog.html"><i class="branchlog"></i> BRANCH LOG</a>
+  <a href="process.html"><i class="process"></i> PROCESS</a>
+  <a href="applicants.html"><i class="applicants"></i> APPLICANTS</a>
+  <a href="estimate.html"><i class="estimate"></i> ESTIMATE</a>
+  <a href="associates.html"><i class="associates"></i> ASSOCIATES</a>
+  <a href="services.html"><i class="services"></i> SERVICES</a>
+  <a href="queries.html"><i class="queries"></i> QUERIES</a>
+
+  <button class="payments-btn"> PAYMENTS
+    <i class="payments-down"></i>
+  </button>
+  <div class="payments-container">
+    <a href="generateinvoice.html">GENERATE INVOICE</a>
+    <a href="paymentsreceived.html">PAYMENTS RECEIVED</a>
+  </div>
+
+  <button class="squad-btn"> SQUAD
+    <i class="squad-down"></i>
+  </button>
+  <div class="squad-container">
+    <a href="squad1.html">SQUAD 1</a>
+    <a href="squad2.html">SQUAD 2</a>
+  </div>
+
+  <a href="representatives.html"><i class="representatives"></i> REPRESENTATIVES</a>
+  <a href="allocations.html"><i class="allocations"></i> ALLOCATIONS</a>
+
+  <button class="reports-btn"> REPORTS
+    <i class="reports-down"></i>
+  </button>
+  <div class="reports-container">
+    <a href="generatereports.html">GENERATE REPORTS</a>
+    <a href="managereports.html">MANAGE REPORTS</a>
+  </div>
+
+  <a href="leads.html"><i class="leads"></i> LEADS</a>
+</div>
+
+<div class="main">
+  <h2>Australasia</h2>
+  
+</div>
+
+<script>
+var payments = document.getElementsByClassName("payments-btn");
+var i;
+
+for (i = 0; i < payments.length; i++) {
+  payments[i].addEventListener("click", function() {
+  this.classList.toggle("active");
+  var paymentsContent = this.nextElementSibling;
+  if (paymentsContent.style.display === "block") {
+  paymentsContent.style.display = "none";
+  } else {
+  paymentsContent.style.display = "block";
+  }
+  });
+}
+</script>
+
+</body>
+</html> 
